@@ -8,7 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Jaini&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+ 
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -69,6 +72,7 @@
       font-weight: bold;
       cursor: pointer;
       font-family: 'Jaini', cursive;
+      font-size: 25px;
     }
 
     button:hover {
@@ -134,7 +138,7 @@
 
     <div class="input-group">
       <input type="text" id="taskInput" placeholder="Enter your task">
-      <input type="date" id="dateInput">
+      <input type="text" id="dateInput" placeholder="Select date">
       <button onclick="addTask()">Add Task</button>
     </div>
 
@@ -142,6 +146,7 @@
   </div>
 
   <script>
+    
     const taskList = document.getElementById("taskList");
 
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -180,6 +185,13 @@
       saveTasks();
       renderTasks();
     }
+
+    flatpickr("#dateInput", {
+    dateFormat: "Y-m-d",
+    allowInput: true
+});
+
+
 
     function renderTasks() {
       taskList.innerHTML = "";
@@ -223,6 +235,9 @@
     }
 
     renderTasks();
+
+   
+
   </script>
 </body>
 </html>
