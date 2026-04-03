@@ -1,0 +1,42 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url("https://4kwallpapers.com/images/wallpapers/purple-aesthetic-2560x1080-18775.jpg") no-repeat center center/cover;
+  background-blend-mode: luminosity;
+  font-family: 'Martel Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.app {
+  background: rgba(141,133,225,0.5);
+  backdrop-filter: blur(6px);
+  width: 600px;
+  padding: 25px;
+  border-radius: 16px;
+  color: #fff;
+}
+
+h1 { text-align: center; font-family: 'Dancing Script', cursive; font-size: 45px; margin-bottom: 20px; }
+
+.input-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+
+input { padding: 10px; border-radius: 8px; border: none; font-family: 'Roboto Condensed', sans-serif; font-size: 16px; }
+
+button { padding: 10px; border: none; border-radius: 8px; background: #b882e5; color: #000; font-weight: bold; cursor: pointer; font-family: 'Jaini', cursive; font-size: 20px; }
+button:hover { background: #8a4cb0; }
+
+ul { list-style: none; padding: 0; margin-top: 10px; }
+li { background: rgba(255,255,255,0.15); margin-bottom: 10px; padding: 10px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }
+.task-info { display: flex; align-items: center; gap: 10px; }
+.completed { text-decoration: line-through; opacity: 0.6; }
+.date { font-size: 12px; opacity: 0.8; }
+.delete { background: rgb(103, 98, 167); color: #fff; border-radius: 6px; padding: 6px 10px; font-size: 12px; }
+.delete:hover { background: rgb(88, 64, 113); }
+
+.progress-container { display: flex; justify-content: space-around; margin-bottom: 20px; }
+canvas { background: rgba(255,255,255,0.15); border-radius: 50%; }
